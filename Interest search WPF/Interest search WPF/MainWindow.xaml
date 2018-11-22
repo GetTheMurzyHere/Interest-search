@@ -1,0 +1,23 @@
+﻿<Window x:Class="Interest_Search_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Interest_Search_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid x:Name="ChatWindow" HorizontalAlignment="Left" Height="400" VerticalAlignment="Top" Width="404" Margin="380,10,0,0" Background="#FFCAC2C2" >
+            <ListBox x:Name="Categories" HorizontalAlignment="Left" Height="249" VerticalAlignment="Top" Width="289" Margin="-337,77,0,0" BorderThickness="0">
+                <Button x:Name="StudySortButton" Content="Учёба" BorderBrush="Black" BorderThickness="1" FontSize="25" HorizontalAlignment="Center" Width="273"/>
+                <Button x:Name="SmokeSortButton" Content="Курилка" BorderBrush="Black" BorderThickness="1" FontSize="25" HorizontalAlignment="Center" Width="273" Margin="0,10,0,0"/>
+                <Button x:Name="ExchangeBuySortButton" Content="Обмен / продажа" BorderBrush="Black" BorderThickness="1" FontSize="25" HorizontalAlignment="Center" Width="273" Margin="0,10,0,0"/>
+                <Button x:Name="LostSortButton" Content="Потеряшки" BorderBrush="Black" BorderThickness="1" FontSize="25" HorizontalAlignment="Center" Width="273" Margin="0,10,0,0"/>
+                <Button x:Name="OtherSortButton" Content="Другое" BorderBrush="Black" BorderThickness="1" FontSize="25" HorizontalAlignment="Center" Width="273" Margin="0,10,0,0"/>
+            </ListBox>
+        </Grid>
+        <Label x:Name="NicknameLabel" Content="Label" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="29,10,0,0" Height="41" Width="142"/>
+        <Button x:Name="AddMessageButton" BorderBrush="Black" BorderThickness="1" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Margin="49,341,0,0" Height="33" Click="AddMessageButton_Click"/>
+        <Button x:Name="RefreshChat" BorderBrush="Black" BorderThickness="1" Content="Обновить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="131" Margin="188,341,0,0" Height="33" Click="AddMessageButton_Click"/>
+    </Grid>
+</Window>
