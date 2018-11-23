@@ -23,5 +23,20 @@ namespace Interest_Search_WPF
         {
             InitializeComponent();
         }
+
+        private void NameInputBoxClick(object sender, MouseEventArgs e)
+        {
+            NameInputBox.Text = "";
+        }
+
+        private void PlaceInputBoxClick(object sender, MouseEventArgs e)
+        {
+            PlaceInputBox.Text = "";
+        }
+
+        private void TimeInputBoxClick(object sender, MouseEventArgs e)
+        {
+            TimeInputBox.Text = "";
+        }
     }
 }

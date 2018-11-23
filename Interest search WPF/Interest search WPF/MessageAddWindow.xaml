@@ -8,9 +8,9 @@
         Title="MessageAddWindow" Height="474.324" Width="435.135">
     <Grid Margin="0,0,3.6,2">
         <TextBox x:Name="MessageInputBox" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="172" Margin="32,189,0,0" TextWrapping="Wrap" Text="Введите текст сообщения" VerticalAlignment="Top" Width="366" FontSize="20"/>
-        <TextBox x:Name="NameInputBox" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="35" Margin="32,26,0,0" TextWrapping="Wrap" Text="Введите имя" VerticalAlignment="Top" Width="366" FontSize="20"/>
-        <TextBox x:Name="PlaceInputBox" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="35" Margin="32,66,0,0" TextWrapping="Wrap" Text="Введите место события" VerticalAlignment="Top" Width="366" FontSize="20"/>
-        <TextBox x:Name="TimeInputBox" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="35" Margin="32,106,0,0" TextWrapping="Wrap" Text="Введите время события" VerticalAlignment="Top" Width="366" FontSize="20"/>
+        <TextBox x:Name="NameInputBox" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="35" Margin="32,26,0,0" TextWrapping="Wrap" Text="Введите имя" VerticalAlignment="Top" Width="366" FontSize="20" GotMouseCapture="NameInputBoxClick"/>
+        <TextBox x:Name="PlaceInputBox" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="35" Margin="32,66,0,0" TextWrapping="Wrap" Text="Введите место события" VerticalAlignment="Top" Width="366" FontSize="20" GotMouseCapture="PlaceInputBoxClick"/>
+        <TextBox x:Name="TimeInputBox" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="35" Margin="32,106,0,0" TextWrapping="Wrap" Text="Введите время события" VerticalAlignment="Top" Width="366" FontSize="20" GotMouseCapture="TimeInputBoxClick"/>
         <Button x:Name="SendMessageButton" Content="Отправить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="169" Margin="32,380,0,0" Height="48" FontSize="20"/>
         <Button x:Name="CancelButton" Content="Отменить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Margin="224,380,0,0" Height="48" FontSize="20"/>
     </Grid>
