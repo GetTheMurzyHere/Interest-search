@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+
+using Interest_Search_WPF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,10 +17,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Interest_Search_WPF
-{
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+    {
+
+    }
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -26,8 +28,8 @@ namespace Interest_Search_WPF
 
         private void AddMessageButton_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageAddWindow MessageWindow = new MessageAddWindow();
+            MessageWindow.Show();
         }
-    }
 
-}
+    }

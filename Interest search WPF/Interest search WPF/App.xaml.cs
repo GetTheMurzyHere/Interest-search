@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Interest_search_WPF
+namespace Interest_Search_WPF
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml

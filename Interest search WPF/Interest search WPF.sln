@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interest search WPF", "Interest search WPF\Interest search WPF.csproj", "{948DD481-3010-4AEB-83E5-8AA559432E6C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interest Search WPF", "Interest Search WPF\Interest Search WPF.csproj", "{867E4C41-0914-4B4A-B0BA-0C30DABDA140}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{948DD481-3010-4AEB-83E5-8AA559432E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{948DD481-3010-4AEB-83E5-8AA559432E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{948DD481-3010-4AEB-83E5-8AA559432E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{948DD481-3010-4AEB-83E5-8AA559432E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{867E4C41-0914-4B4A-B0BA-0C30DABDA140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{867E4C41-0914-4B4A-B0BA-0C30DABDA140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{867E4C41-0914-4B4A-B0BA-0C30DABDA140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{867E4C41-0914-4B4A-B0BA-0C30DABDA140}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9AA2A3B6-EFEA-4692-8109-1809347C9184}
+		SolutionGuid = {DD97B7A9-88FC-4532-B881-3A34D655D66C}
 	EndGlobalSection
 EndGlobal

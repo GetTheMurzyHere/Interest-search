@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Interest_search_WPF.Properties
+namespace Interest_Search_WPF.Properties
 {
 
 
