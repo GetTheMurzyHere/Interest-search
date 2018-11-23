@@ -16,7 +16,6 @@
                 <Button x:Name="OtherSortButton" Content="Другое" BorderBrush="Black" BorderThickness="1" FontSize="25" HorizontalAlignment="Center" Width="273" Margin="0,10,0,0"/>
             </ListBox>
         </Grid>
-        <Label x:Name="NicknameLabel" Content="Label" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="29,10,0,0" Height="41" Width="142"/>
         <Button x:Name="AddMessageButton" BorderBrush="Black" BorderThickness="1" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="122" Margin="49,357,0,0" Height="33" Click="AddMessageButton_Click" FontSize="20"/>
         <Button x:Name="RefreshChatButton" BorderBrush="Black" BorderThickness="1" Content="Обновить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="131" Margin="188,357,0,0" Height="33" FontSize="20"/>
     </Grid>

@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Interest_Search_WPF
 {
-    /// <summary>
-    /// Логика взаимодействия для MessageAddWindow.xaml
-    /// </summary>
     public partial class MessageAddWindow : Window
     {
         public MessageAddWindow()
@@ -37,6 +34,21 @@ namespace Interest_Search_WPF
         private void TimeInputBoxClick(object sender, MouseEventArgs e)
         {
             TimeInputBox.Text = "";
+        }
+
+        private void MessageInputBoxClick(object sender, MouseEventArgs e)
+        {
+            MessageInputBox.Text = "";
+        }
+
+        private void SendMessageButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CancelButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
