@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,9 @@ namespace Interest_Search_WPF
 {
     public partial class MessageAddWindow : Window
     {
+        bool NameInputcheck = true;
+        bool PlaceInputcheck = true;
+        bool MessageInputcheck = true;
         public MessageAddWindow()
         {
             InitializeComponent();
@@ -23,22 +27,32 @@ namespace Interest_Search_WPF
 
         private void NameInputBoxClick(object sender, MouseEventArgs e)
         {
-            NameInputBox.Text = "";
+            if (NameInputcheck)
+            {
+                NameInputBox.Text = "";
+            };
+            NameInputcheck = false;
+            NameInputBox.Foreground = Brushes.Black;
         }
 
         private void PlaceInputBoxClick(object sender, MouseEventArgs e)
         {
-            PlaceInputBox.Text = "";
-        }
-
-        private void TimeInputBoxClick(object sender, MouseEventArgs e)
-        {
-            TimeInputBox.Text = "";
+            if (PlaceInputcheck)
+            {
+                PlaceInputBox.Text = "";
+            };
+            PlaceInputcheck = false;
+            PlaceInputBox.Foreground = Brushes.Black;
         }
 
         private void MessageInputBoxClick(object sender, MouseEventArgs e)
         {
-            MessageInputBox.Text = "";
+            if (MessageInputcheck)
+            {
+                MessageInputBox.Text = "";
+            };
+            MessageInputcheck = false;
+            MessageInputBox.Foreground = Brushes.Black;
         }
 
         private void SendMessageButtonClick(object sender, RoutedEventArgs e)
@@ -49,6 +63,34 @@ namespace Interest_Search_WPF
         private void CancelButtonClick(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void DateInputBoxClick(object sender, MouseEventArgs e)
+        {
+            if (DatePick.Text == "")
+            {
+                System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+                DatePick.SelectedDate = DateTime.UtcNow;
+            };
+            DatePick.Foreground = Brushes.Black;
+        }
+
+        private void DatePick_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+                e.Handled = true;
+        }
+
+        private void DatePick_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            if (Char.IsNumber(Convert.ToChar(e.Text)) || e.Text == ".")
+            {
+                e.Handled = false;
+            } else
+            {
+                e.Handled = true;
+            }
+            base.OnPreviewTextInput(e);
         }
     }
 }

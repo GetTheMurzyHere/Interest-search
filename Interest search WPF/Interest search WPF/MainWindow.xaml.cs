@@ -25,8 +25,8 @@ namespace Interest_Search_WPF
 
         private void AddMessageButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageAddWindow MessageWindow = new MessageAddWindow();
-            MessageWindow.Show();
+                MessageAddWindow MessageWindow = new MessageAddWindow();
+                MessageWindow.ShowDialog();
         }
 
     }
