@@ -12,6 +12,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
 
 namespace Interest_Search_WPF
 {
@@ -20,11 +23,12 @@ namespace Interest_Search_WPF
         bool NameInputcheck = true;
         bool PlaceInputcheck = true;
         bool MessageInputcheck = true;
+        string connectionString;
         public MessageAddWindow()
         {
             InitializeComponent();
+            connectionString = ConfigurationManager.ConnectionStrings["Interest_Search_WPF.Properties.Settings.isPrimConnectionString"].ConnectionString;    
         }
-
         private void NameInputBoxClick(object sender, MouseEventArgs e)
         {
             if (NameInputcheck)
@@ -57,6 +61,13 @@ namespace Interest_Search_WPF
 
         private void SendMessageButtonClick(object sender, RoutedEventArgs e)
         {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlCommand command = new SqlCommand();
+                command.CommandText = "INSERT INTO dbo.ChatMessages(MessageAuthor, ObjectSelesctID, dateGTime,MessageText) VALUES ('Ersan', 1,13-09-2000,'asd')";
+                command.Connection = connection;
+            }
             this.Close();
         }
 
