@@ -14,6 +14,7 @@ namespace Interest_Search_WPF
         string connectionString;
         SqlDataAdapter adapter;
         DataTable MessageTable;
+        string sql = "SELECT * FROM dbo.ChatMessages";
         public MainWindow()
         {
             InitializeComponent();
@@ -36,15 +37,15 @@ namespace Interest_Search_WPF
         }
         private void UpdateDB()
         {
-            string sql = "SELECT * FROM dbo.ChatMessages";
-            MessageTable = new DataTable();
-            SqlConnection connection = null;
-            connection = new SqlConnection(connectionString);
-            SqlCommand command = new SqlCommand(sql, connection);
-            adapter = new SqlDataAdapter(command);
-            connection.Open();
-            adapter.Fill(MessageTable);
-            chatMessagesDataGrid.ItemsSource = MessageTable.DefaultView;
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+              MessageTable = new DataTable();
+                SqlCommand command = new SqlCommand(sql, connection);
+                adapter = new SqlDataAdapter(command);
+                connection.Open();
+                adapter.Fill(MessageTable);
+                chatMessagesDataGrid.ItemsSource = MessageTable.DefaultView;
+            }
         }
     }
 }

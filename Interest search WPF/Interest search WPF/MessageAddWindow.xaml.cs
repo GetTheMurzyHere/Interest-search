@@ -24,6 +24,7 @@ namespace Interest_Search_WPF
         bool PlaceInputcheck = true;
         bool MessageInputcheck = true;
         string connectionString;
+        string sqlExpression = "INSERT INTO dbo.ChatMessages(MessageAuthor, ObjectSelesctID, dateGTime,MessageText) VALUES ('Ersan', 1,13-09-2000,'asd')";
         public MessageAddWindow()
         {
             InitializeComponent();
@@ -64,9 +65,7 @@ namespace Interest_Search_WPF
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand();
-                command.CommandText = "INSERT INTO dbo.ChatMessages(MessageAuthor, ObjectSelesctID, dateGTime,MessageText) VALUES ('Ersan', 1,13-09-2000,'asd')";
-                command.Connection = connection;
+                SqlCommand command = new SqlCommand(sqlExpression, connection);
             }
             this.Close();
         }
