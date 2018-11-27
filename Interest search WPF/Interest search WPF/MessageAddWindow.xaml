@@ -12,6 +12,13 @@
         <TextBox x:Name="PlaceInputBox" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="35" Margin="32,66,0,0" TextWrapping="Wrap" Text="Введите место события" VerticalAlignment="Top" Width="366" FontSize="20" GotMouseCapture="PlaceInputBoxClick" Foreground="#FF6B6B6B"/>
         <Button x:Name="SendMessageButton" Content="Отправить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="169" Margin="32,380,0,0" Height="48" FontSize="20" Click="SendMessageButtonClick"/>
         <Button x:Name="CancelButton" Content="Отменить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="174" Margin="224,380,0,0" Height="48" FontSize="20" Click="CancelButtonClick"/>
-        <DatePicker x:Name="DatePick" FontSize="20" Text="123" IsDropDownOpen="False" BorderBrush="Black" BorderThickness="2" VerticalAlignment="Top" Height="35" Width="366" Margin="32,106,0,0" Foreground="#FF6B6B6B" GotMouseCapture="DateInputBoxClick" HorizontalAlignment="Left" PreviewKeyDown="DatePick_PreviewKeyDown" PreviewTextInput="DatePick_PreviewTextInput"/>
+        <DatePicker x:Name="DatePick" FontSize="20" IsDropDownOpen="False" BorderBrush="Black" BorderThickness="2" VerticalAlignment="Top" Height="35" Width="366" Margin="32,106,0,0" Foreground="#FF6B6B6B" GotMouseCapture="DateInputBoxClick" HorizontalAlignment="Left" PreviewKeyDown="DatePick_PreviewKeyDown" PreviewTextInput="DatePick_PreviewTextInput"/>
+        <ComboBox FontSize="20" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="366" Margin="32,149,0,0" Height="35">
+            <TextBlock> Учёба</TextBlock>
+            <TextBlock> Курилка</TextBlock>
+            <TextBlock> Обмен / продажа </TextBlock>
+            <TextBlock> Потеряшки </TextBlock>
+            <TextBlock> Другое </TextBlock>
+        </ComboBox>
     </Grid>
 </Window>
