@@ -47,5 +47,35 @@ namespace Interest_Search_WPF
                 chatMessagesDataGrid.ItemsSource = MessageTable.DefaultView;
             }
         }
+
+        private void StudySortButton_Click(object sender, RoutedEventArgs e)
+        {
+            sql = "SELECT * FROM dbo.ChatMessages WHERE Category = 'Study'";
+            UpdateDB();
+        }
+
+        private void SmokeSortButton_Click(object sender, RoutedEventArgs e)
+        {
+            sql = "SELECT * FROM dbo.ChatMessages WHERE Category = 'Smoking'";
+            UpdateDB();
+        }
+
+        private void ExchangeBuySortButton_Click(object sender, RoutedEventArgs e)
+        {
+            sql = "SELECT * FROM dbo.ChatMessages WHERE Category = 'Trading'";
+            UpdateDB();
+        }
+
+        private void LostSortButton_Click(object sender, RoutedEventArgs e)
+        {
+            sql = "SELECT * FROM dbo.ChatMessages WHERE Category = 'Losting'";
+            UpdateDB();
+        }
+
+        private void OtherSortButton_Click(object sender, RoutedEventArgs e)
+        {
+            sql = "SELECT * FROM dbo.ChatMessages WHERE Category = 'Other'";
+            UpdateDB();
+        }
     }
 }

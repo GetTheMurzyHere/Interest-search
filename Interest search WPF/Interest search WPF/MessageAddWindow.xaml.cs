@@ -24,7 +24,7 @@ namespace Interest_Search_WPF
         bool PlaceInputcheck = true;
         bool MessageInputcheck = true;
         string connectionString;
-        string sqlExpression = "INSERT INTO dbo.ChatMessages(MessageAuthor, ObjectSelesctID, dateGTime,MessageText) VALUES ('Ersan', 1,13-09-2000,'asd')";
+        string sqlExpression = "INSERT INTO dbo.ChatMessages(MessageAuthor, Category, DatePlace,dTime, MessageText) VALUES ('Ersan', 'Losting',' in Corpus B',13-09-2000,'I lost my hat')";
         public MessageAddWindow()
         {
             InitializeComponent();
